@@ -14,10 +14,6 @@ app.use(express.json());
 app.use('/tasks', tasksRouter);
 app.use('/notes', notesRouter);
 
-// mongoose.connect(db, { useNewUrlParser: true, useCreateInder: true });
-// const connection = mongoose.connection
-// connection.once('open', () => console.log('MongoDB connected...'))
-
 mongoose
   .connect(db, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('MongoDB connected...'))
